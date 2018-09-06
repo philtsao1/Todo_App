@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+</head>
+<body>
+  <h1 style="font-size:50px;color:green">Todo App</h1>
+  <a href="../register"><button>Register</button></a>
+
+  <a href="../login"><button>Login</button></a>
+  <br>
+  <br>
+  <br>
+
+  <form action="{{ url_for('register') }}" method="POST">
+        <input type="text" placeholder="Register" name="regs" value="{{ request.form.regs }}">
+        <input type="submit" value="Register">
+  </form>
+
+  <div>
+    {% if reg %}
+        <p> {{ reg }} </p>
+    {% endif %}
+  </div>
+
+
+</body>
+</html>
